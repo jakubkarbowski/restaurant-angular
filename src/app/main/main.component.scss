@@ -1,0 +1,45 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  counter-reset: count;
+  margin: 0;
+  padding: 3vw 2vw;
+
+  dt {
+    display: flex;
+    counter-increment: count;
+    padding: 10px;
+    color: #353b3e;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #e0e0e0;
+
+    &::before {
+      content: counter(count, decimal-leading-zero)".";
+      color: #4e8695;
+      padding-right: 12px;
+    }
+
+    .spacer {
+      flex: 1;
+    }
+
+    .cost {
+      align-self: flex-end;
+    }
+  }
+
+  dd {
+    padding: 10px;
+    margin-left: 5vw;
+    margin-bottom: 2vh;
+    background: #e0e0e0;
+  }
+}
+
+
+
+
+
+

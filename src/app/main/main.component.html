@@ -1,0 +1,12 @@
+<h1>Menu</h1>
+
+<dl class="menu">
+    <ng-container *ngFor="let item of (menu$ | async)">
+        <dt>
+            {{item.name}}
+            <span class="spacer"></span>
+            <span class="cost">{{item.cost}}$</span>
+        </dt>
+        <dd *ngIf="item?.description">{{item?.description}}</dd>
+    </ng-container>
+</dl>
